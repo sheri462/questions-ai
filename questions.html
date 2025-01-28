@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Survey Questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Survey Questionnaire by M Shehryar Ali for WIW60600 Study Abroad Module I</h1>
+        <form>
+            <!-- Participant Qualification Questions -->
+            <h2>1. Participant Qualification Questions</h2>
+
+            <div class="question">
+                <label for="role">What is your current role in your organization?</label>
+                <input type="text" id="role" name="role">
+            </div>
+
+            <div class="question">
+                <label>How many years have you been working in the field of Engineering?</label>
+                <select name="experience" id="experience">
+                    <option value="5-7">5–7 years</option>
+                    <option value="8-10">8–10 years</option>
+                    <option value="11+">11+ years</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>Which sector best describes your current organization?</label>
+                <select name="sector" id="sector">
+                    <option value="technology">Technology</option>
+                    <option value="finance">Finance</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="other">Other (please specify)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="english">What is your proficiency level in English?</label>
+                <select name="english" id="english">
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>Are you currently employed by a multinational corporation (MNC)?</label>
+                <input type="radio" name="employed" value="yes" id="employed_yes">
+                <label for="employed_yes">Yes</label>
+                <input type="radio" name="employed" value="no" id="employed_no">
+                <label for="employed_no">No</label>
+            </div>
+
+            <div class="question">
+                <label>How were you contacted for this study?</label>
+                <select name="contacted" id="contacted">
+                    <option value="email">Email</option>
+                    <option value="social">Social Media (LinkedIn, etc.)</option>
+                    <option value="network">Professional Network</option>
+                </select>
+            </div>
+
+            <!-- Core Questionnaire -->
+            <h2>2. Core Questionnaire: Impact of AI on Decision-Making Processes</h2>
+
+            <div class="question">
+                <label for="gender">What is your gender?</label>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="prefer_not">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>What is the size of your current organization?</label>
+                <select name="organization_size" id="organization_size">
+                    <option value="<500">Fewer than 500 employees</option>
+                    <option value="500-5000">500–5,000 employees</option>
+                    <option value=">5000">More than 5,000 employees</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>To what extent do you agree with the statement: "AI has  improved the certain decision-making processes in my organization"?</label>
+                <select name="ai_impact" id="ai_impact">
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>How has AI impacted processes in your organization and what has been most impacted by AI? (Check all that apply)</label>
+                <input type="checkbox" name="impact" value="speed"> Speed of decision-making<br>
+                <input type="checkbox" name="impact" value="accuracy"> Accuracy of predictions<br>
+                <input type="checkbox" name="impact" value="data"> Data analysis and insights<br>
+                <input type="checkbox" name="impact" value="bias"> Reduced human bias<br>
+                <input type="checkbox" name="impact" value="other"> Other
+            </div>
+
+            <div class="question">
+                <label for="challenges">What have you experienced in implementing AI for decision-making?</label>
+                <textarea id="challenges" name="challenges" rows="4"></textarea>
+            </div>
+
+            <div class="question">
+                <label>Will replace human decision-making entirely in the future?</label>
+                <input type="radio" name="replace" value="yes" id="replace_yes">
+                <label for="replace_yes">Yes</label>
+                <input type="radio" name="replace" value="no" id="replace_no">
+                <label for="replace_no">No</label>
+                <input type="radio" name="replace" value="maybe" id="replace_maybe">
+                <label for="replace_maybe">Maybe</label>
+            </div>
+
+            <div class="question">
+                <label for="skills">Skills needed to stay relevant in an AI-driven workplace?</label>
+                <textarea id="skills" name="skills" rows="4"></textarea>
+            </div>
+
+            <div class="question">
+                <label for="ethics">Ethical implications of using AI in business decision-making?</label>
+                <textarea id="ethics" name="ethics" rows="4"></textarea>
+            </div>
+
+            <!-- Closing and Follow-Up -->
+            <h2>3. Closing and Follow-Up</h2>
+
+            <div class="question">
+                <label>Would you like to receive the results of this study?</label>
+                <input type="radio" name="results" value="yes" id="results_yes">
+                <label for="results_yes">Yes</label>
+                <input type="radio" name="results" value="no" id="results_no">
+                <label for="results_no">No</label>
+                <br>
+                <label for="email">If yes, please provide your email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="question">
+                <label for="comments">Do you have any additional comments or suggestions about this topic?</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
